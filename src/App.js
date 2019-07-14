@@ -1,12 +1,10 @@
 import React from 'react';
-import Counter from './containers/counter';
-import Shop from './containers/shop';
+import Header from './containers/Header'
 
 function App() {
     return (
         <div className="App">
-            <Counter/>
-            <Shop />
+            <Header/>
         </div>
     );
 }

@@ -17,4 +17,3 @@ export const SelectItem = (props: Props) => {
         </div>
     );
 };
-
