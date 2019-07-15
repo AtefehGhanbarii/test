@@ -15,19 +15,47 @@
 // export default NewsItem;
 
 
+
+
 import React from 'react';
 
-const NewsItem = (props) => {
-    return(
+const NewsItem  = (props) => {
+    console.log(props)
+    return (
         <div>
-            <h6>{props.product.name}</h6>
-            <h5>{props.product.price}</h5>
+            <h5>{props.product.name}</h5>
+            <h6>{props.product.price}</h6>
         </div>
     )
 }
 
 
 export default NewsItem;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

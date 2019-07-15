@@ -2,7 +2,7 @@ import React,{ Component } from 'react';
 import NewsList from './news_list';
 import Products from '../_mocApi/Products';
 
-class Header extends Component {
+class Product extends Component {
     state = {
         title: 'this keywords are:',
         keywords: ''
@@ -20,7 +20,7 @@ class Header extends Component {
         return(
             <div>
                 <input type="text" onChange={this.inputChangeHandler}/>
-                <NewsList productsItem={Products}/>
+                <NewsList productsItem = {Products}/>
                 onClick={console.log('this is clicked')}
                 <div>{this.state.title}</div>
                 <div>{this.state.keywords}</div>
@@ -29,4 +29,6 @@ class Header extends Component {
     }
 }
 
-export default Header;
+
+
+export default Product;

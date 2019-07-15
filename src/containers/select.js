@@ -9,10 +9,11 @@ const Div = styled.div`
      text-align: center;
     `;
 
-class Counter extends Component {
+class SelectBox extends Component {
     state = {
         count: 0,
         showOption: false,
+        selectedOption: null,
         selectedOption: null,
     };
 
@@ -46,6 +47,21 @@ class Counter extends Component {
         })
     };
 
+    hadleShowOption = () => {
+        this.setState({
+            showOption: true
+        })
+    };
+
+    handleChange = selectedOption => {
+        this.setState({ selectedOption });
+        console.log(`Option selected:`, selectedOption);
+    };
+
+    handleSelect = (item) => {
+        console.log(item, 'this is item inside handle selc inside counter')
+    };
+
     render() {
         const { selectedOption } = this.state;
         const options = [
@@ -57,21 +73,15 @@ class Counter extends Component {
         ];
         return (
             <div>
-                Current count: {this.state.count}
-                <hr/>
-                <Button
-                    type="primary"
-                    loading
-                    title="string"
-                    onClick={this.handleIncrease}
+                <Select
+                    onSelect={this.handleSelect}
+                    options={options}
+                    placeholder="شهر"
                 />
-                <Button title="-" onClick={this.handleDecrease} disabled={this.state.count === 0}/>
-                {this.state.count.toString().length}<br/>
-
             </div>
         );
     }
 }
 
 
-export default Counter;
+export default SelectBox;
