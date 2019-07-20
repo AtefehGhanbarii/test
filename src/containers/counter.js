@@ -55,6 +55,7 @@ class Counter extends Component {
             { name: '2', value: '2Value' },
             { name: '3', value: '3Value' }
         ];
+
         return (
             <div>
                 Current count: {this.state.count}

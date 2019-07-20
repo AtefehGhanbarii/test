@@ -12,12 +12,12 @@ type Props = {
 };
 
 const ButtonSty = styled.button`
-  background-color: ${props => props.type === 'primary' ? 'blue' : 'red'}
+  background-color: ${props => props.type === 'primary' ? '#eee' : 'red'}
   font-size: 1em;
-  width: 300px;
+  width: 200px;
   margin: 1em;
   padding: 0.25em 1em;
-  border: 2px solid palevioletred;
+  border: 2px solid #dcdcdc;
   border-radius: 3px;
   ...${props => props.style}
 `;

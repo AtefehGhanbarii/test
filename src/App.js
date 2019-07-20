@@ -6,7 +6,8 @@ import Home from './containers/Home';
 import SelectBox from './containers/select';
 import Profile from './containers/profile';
 import Posts from './containers/posts';
-import PostItem from './containers/post_item'
+import PostItem from './containers/post_item';
+import Shop from './containers/shop';
 
 const App = () => {
     return (
@@ -28,6 +29,7 @@ const App = () => {
                 <Switch>
                     <Route exact path="/posts/:id/:username" component={PostItem}/>
                     <Route exact path="/counter" component={Counter}/>
+                    <Route exact path="/shop" component={Shop}/>
                     <Route exact path="/product" component={Product}/>
                     <Route exact path="/select" component={SelectBox}/>
                     <Route exact path="/profile" component={Profile}/>
