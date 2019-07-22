@@ -65,14 +65,6 @@ class Shop extends Component {
         this.setState({
             totalPrice: result
         });
-        // let musicians = ["Drake", "JB", "MJ", "CP"];
-        // console.log(musicians.sort());
-
-        let points = [30, 100, 2, 8, 65, 10];
-        let sortedDescPoints = points.sort((a, b) => {
-            return a - b;
-        });
-        console.log(sortedDescPoints);
     };
 
     handleChange = (event) => {
@@ -84,7 +76,6 @@ class Shop extends Component {
             <Section>
                 {/*basket*/}
                 <div>
-
                     <h4>سبد خرید</h4>
                     {
                         this.state.sale.map(product => {

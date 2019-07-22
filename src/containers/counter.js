@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from '../components/kit/Button/Button.js';
 import styled from 'styled-components';
-import Select from '../components/kit/Select/Select.js';
-import { SelectItem } from "../components/kit/Select/SelectItem";
 
 const Div = styled.div`
       background-color: #eee;
@@ -16,16 +14,9 @@ class Counter extends Component {
         selectedOption: null,
     };
 
-    // handleIncrease = () => {
-    //     this.setState({
-    //         count: this.state.count + 1
-    //
-    //     })
-    // };
-
     handleMultiIncrease = () => {
         const length = this.state.count.toString().length;
-        console.log(length)
+        console.log(length);
         let stepper = '1';
         for (let i = 1; i <= length - 1; i++) {
             stepper = `${stepper}0`;
@@ -47,28 +38,20 @@ class Counter extends Component {
     };
 
     render() {
-        const { selectedOption } = this.state;
-        const options = [
-            { name: 'tehran', value: 'tehran' },
-            { name: 'msahahad', value: 'mashad' },
-            { name: '1', value: '1Value' },
-            { name: '2', value: '2Value' },
-            { name: '3', value: '3Value' }
-        ];
-
         return (
             <div>
                 Current count: {this.state.count}
                 <hr/>
                 <Button
+                    title="+"
                     type="primary"
                     loading
-                    title="string"
                     onClick={this.handleIncrease}
                 />
-                <Button title="-" onClick={this.handleDecrease} disabled={this.state.count === 0}/>
-                {this.state.count.toString().length}<br/>
-
+                <Button title="-"
+                        onClick={this.handleDecrease}
+                        disabled={this.state.count === 0}
+                />
             </div>
         );
     }
