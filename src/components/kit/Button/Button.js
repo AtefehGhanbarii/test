@@ -1,28 +1,21 @@
-// @flow
 import React from 'react';
 import styled from 'styled-components';
 
-type Props = {
-    title: String,
-    type: 'primary' | 'secondary';
-    onClick: Function,
-    disabled: Boolean,
-    loading: Boolean,
-    style: Object
-};
-
 const ButtonSty = styled.button`
-  background-color: ${props => props.type === 'primary' ? '#eee' : 'red'}
-  font-size: 1em;
-  width: 200px;
-  margin: 1em;
-  padding: 0.25em 1em;
-  border: 2px solid #dcdcdc;
-  border-radius: 3px;
+  background-color: ${props => props.type === 'primary' ? '#fe4545' : 'red'}
+  border: none;
+  padding: 11px 70px;
+  border-radius: 27px;
+  font-size: 17px;
+  border-bottom: 4px solid #d32929;
+  margin-top: 2%;
+  color: #fff;
+  curser: pointer;
+  
   ...${props => props.style}
 `;
 
-export const Button = (props: Props) => {
+export const Button = (props) => {
     return (
         <ButtonSty
             onClick={props.onClick}
@@ -37,7 +30,6 @@ export const Button = (props: Props) => {
 
 Button.defaultProps = {
     title: 'دکمه',
-    type: 'primary',
     disabled: false,
     loading: false,
     style: {}
