@@ -53,7 +53,7 @@ class Sale extends Component {
                </div>
                <div>
                 <h3><span> درصد تخفیف40</span> بدون<br></br> محدودیت برای اولین<br></br> خرید از فیدیبو</h3>
-                <p> dgk 40 :کد تخفیف</p>
+                <p> dgk 40 %:کد تخفیف</p>
                </div>
                
            </Div>
@@ -62,5 +62,5 @@ class Sale extends Component {
 }
 
 
-
+   
 export default Sale;

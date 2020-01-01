@@ -7,7 +7,6 @@ import Logo from '../../assets/images/logo.png';
 import Modal from '../../components/kit/Modal/modal';
 import { Linkitem } from '../kit/Linkitem/linkitem';
 
-
 const Div = styled.div `
   background-image: url(${Background});
   width:900px;
@@ -119,12 +118,12 @@ class Heading extends Component {
         this.setState({showModal: false});
     };
 
-
     render() {
         return (
             <>
             
            <Div>
+               <a href='/auth'>ثبت نام</a>
               <span><img src={Logo} alt="Logo" /></span> 
                <Section>
                <div>
@@ -163,7 +162,7 @@ class Heading extends Component {
                             <Linkitem link="http://google.com" type="primary">دریافت مستقیم</Linkitem>
                             <p>ویندوز</p>
                             <Linkitem link="http://google.com" type="primary">دریافت ویندوز</Linkitem>
-                    </Modal>
+                </Modal>
            </Div>
            </>
         )
